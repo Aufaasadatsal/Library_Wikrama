@@ -9,7 +9,6 @@ class Artikel extends Model
 {
     use HasFactory;
 
-
     protected $fillable = 
     [
         'artikel_id',

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Profil;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class profilAdminController extends Controller
 {
@@ -44,7 +45,7 @@ class profilAdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(cr $cr)
+    public function show($cr)
     {
         //
     }
@@ -63,24 +64,36 @@ class profilAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // Find the profil by id or fail
         $profil = Profil::findOrFail($id);
     
+        // Validate the incoming request
         $validate = $request->validate([
             'judul_profil' => 'required',
             'isi_profil' => 'required',
             'status' => 'required',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Gambar opsional
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Optional image
         ]);
     
+        // Check if a new image file is being uploaded
         if ($request->hasFile('gambar')) {
-            // Jika ada gambar baru diunggah, simpan dan hapus gambar lama
+            // Delete the old image if it exists
+            if ($profil->gambar) {
+                Storage::disk('public')->delete($profil->gambar);
+            }
+    
+            // Store the new image and update the validate array
             $validate['gambar'] = $request->file('gambar')->store('profil', 'public');
+        } else {
+            // If no new image is uploaded, retain the old image path
+            $validate['gambar'] = $profil->gambar;
         }
     
+        // Update the profil with validated data
         $profil->update($validate);
-        return redirect()->route('admin.profil')->with('success', 'Profil berhasil diperbarui');
-    }
     
+        return redirect()->route('admin.profil')->with('success', 'Profil berhasil diperbarui');
+    }    
 
     /**
      * Remove the specified resource from storage.
