@@ -51,7 +51,7 @@
                                 <!-- Dropdown Opsi -->
                                 <div id="options-{{ $blog->id }}" class="hidden mt-2 space-y-2">
                                     <a href="{{ route('admin.edit-blog', $blog->id) }}"
-                                            class="block bg-gray-100 px-4 py-1 rounded hover:bg-blue-100">Edit</a>
+                                            class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
                                     <button onclick="confirmDelete({{ $blog->id }})"
                                             class="block bg-red-100 px-4 py-1 rounded hover:bg-red-200">Hapus</button>
                                         <form id="delete-form-{{ $blog->id }}" action="{{ route('admin.delete-blog', $blog->id) }}" method="POST" style="display: none;">
