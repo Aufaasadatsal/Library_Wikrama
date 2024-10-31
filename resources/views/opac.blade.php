@@ -12,7 +12,7 @@
                 class="text-[#96684f] flex border-none bg-[#f3ebe8] items-center justify-center pl-4 rounded-l-lg border-r-0"
                 data-icon="MagnifyingGlass"
                 data-size="24px"
-                data-weight="regular"
+                data-weight="regula"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                   <path
