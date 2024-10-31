@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('artikels', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_artikel');
-            $table->text('isi_artikel');
-            $table->string('status');
+            $table->string('judul');
+            $table->text('isi');
+            $table->string('image');
+            $table->enum('status', ['aktif', 'tidak aktif']);
             $table->timestamps();
         });
     }

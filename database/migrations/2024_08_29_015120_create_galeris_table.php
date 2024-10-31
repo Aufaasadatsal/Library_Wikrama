@@ -14,11 +14,10 @@ return new class extends Migration
         Schema::create('galeris', function (Blueprint $table) {
             $table->id();
             $table->string('file');
-            $table->unsignedBigInteger('kategori_id');
-            $table->foreign('kategori_id')->references('id')->on('galerikategoris')->onDelete('cascade');
+            $table->string('kategori');
             $table->string('keterangan');
             $table->string('oleh');
-            $table->datetime('tgl');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }

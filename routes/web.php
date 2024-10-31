@@ -30,11 +30,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [IndexAdminController::class, 'index'])->name('index');
     Route::get('/blog', [BlogAdminController::class, 'index'])->name('blog');
     Route::get('/create-blog', [BlogAdminController::class, 'create'])->name('create-blog');
-    Route::get('/edit-blog', [BlogAdminController::class, 'edit'])->name('edit-blog');
+    Route::post('/store-blog', [BlogAdminController::class, 'store'])->name('store-blog');
+    Route::get('/edit-blog/{id}', [BlogAdminController::class, 'edit'])->name('edit-blog');
+    Route::put('/update-blog/{id}', [BlogAdminController::class, 'update'])->name('update-blog');
+    Route::delete('/delete-blog/{id}', [BlogAdminController::class, 'destroy'])->name('delete-blog');
 
     Route::get('/galeri', [GaleriAdminController::class, 'index'])->name('galeri');
     Route::get('/create-galeri', [GaleriAdminController::class, 'create'])->name('create-galeri');
-    Route::get('/edit-galeri', [GaleriAdminController::class, 'edit'])->name('edit-galeri');
+    Route::post('/store-galeri', [GaleriAdminController::class, 'store'])->name('store-galeri');
+    Route::get('/edit-galeri/{id}', [GaleriAdminController::class, 'edit'])->name('edit-galeri');
+    Route::put('/update-galeri/{id}', [GaleriAdminController::class, 'update'])->name('update-galeri');
+    Route::delete('/delete-galeri/{id}', [GaleriAdminController::class, 'destroy'])->name('delete-galeri');
 
     Route::get('/profil', [ProfilAdminController::class, 'index'])->name('profil');
     Route::get('/create-profil', [ProfilAdminController::class, 'create'])->name('create-profil');

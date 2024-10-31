@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Visimis extends Model
+class Blog extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'visi',
-        'misi',
-        'motto',
+    protected $fillable = 
+    [
+        'judul',
+        'isi',
+        'image',
+        'status'
     ];
 }

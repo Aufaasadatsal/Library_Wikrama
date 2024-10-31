@@ -4,7 +4,7 @@
 <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg w-full">
     <h2 class="text-3xl font-bold mb-4">Create Blog</h2>
 
-    <form action="" method="POST" enctype="multipart/form-data" class="space-y-6">
+    <form action="{{ route('admin.store-blog') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
         @csrf <!-- Token CSRF untuk keamanan -->
 
         <!-- Judul Blog -->
@@ -26,7 +26,7 @@
         <!-- Gambar -->
         <div class="space-y-2">
             <label for="gambar" class="block text-gray-600 font-semibold">Upload Gambar</label>
-            <input type="file" id="gambar" name="gambar"
+            <input type="file" id="gambar" name="image"
                 class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                 accept="image/*">
             <p class="text-sm text-gray-400">Format gambar: JPG, PNG, GIF (max: 10 MB)</p>
