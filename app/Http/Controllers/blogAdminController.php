@@ -42,7 +42,8 @@ class blogAdminController extends Controller
 
     public function show($id)
     {
-        //
+        $data['blog'] = Blog::findorfail($id);
+        return view('admin.blog.show', $data);
     }
 
     public function edit($id)
