@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Profil;
 use Validator;
-=======
-use App\Models\Profil;
-use Illuminate\Http\Request;
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
 
 class ProfilController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-<<<<<<< HEAD
     public function index(Request $request)
     {
         $profil = Profil::all();
@@ -34,17 +28,11 @@ class ProfilController extends Controller
             'message' => 'Data Profil ditemukan',
             'status' => 200,
         ], 200);
-=======
-    public function index()
-    {
-        //
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
     }
 
     /**
      * Show the form for creating a new resource.
      */
-<<<<<<< HEAD
     public function create(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -75,11 +63,6 @@ class ProfilController extends Controller
             'status' => 200,
             'message' => 'Data Profil Berhasil ditambahkan',
         ], 200);
-=======
-    public function create()
-    {
-        //
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
     }
 
     /**
@@ -109,7 +92,6 @@ class ProfilController extends Controller
     /**
      * Update the specified resource in storage.
      */
-<<<<<<< HEAD
     public function update(Request $request, Profil $profil, string $id)
     {
         $profil = Profil::find($id);
@@ -148,17 +130,11 @@ class ProfilController extends Controller
             'data' => 200,
             'message' => 'Data Profil Berhasil Diupdate',
         ], 200);
-=======
-    public function update(Request $request, Profil $profil)
-    {
-        //
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
     }
 
     /**
      * Remove the specified resource from storage.
      */
-<<<<<<< HEAD
     public function destroy(Profil $profil, string $id)
     {
         $profil = Profil::find($id);
@@ -175,10 +151,5 @@ class ProfilController extends Controller
             'data' => 200,
             'message' => 'Data Profil Berhasil Dihapus',
         ], 200);
-=======
-    public function destroy(Profil $profil)
-    {
-        //
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
     }
 }

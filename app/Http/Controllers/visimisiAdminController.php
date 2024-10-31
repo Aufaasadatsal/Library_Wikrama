@@ -10,9 +10,10 @@ class visimisiAdminController extends Controller
 {
     public function index()
     {
-        $data['visimisis'] = Visimisi::all();
-        return view('admin.visimisi', $data);
+        $visimisis = Visimisi::all(); // Mengambil semua data dari model Visimisi
+        return view('admin.visimisi', compact('visimisis')); // Mengirimkan data ke view profile.blade.php
     }
+
 
     public function create()
     {
@@ -33,23 +34,21 @@ class visimisiAdminController extends Controller
 
     public function edit($id)
     {
-        $data['visimisi'] = Visimisi::findorfail($id);
-        return view('admin.visimisi.edit', $data);
+        $visimisi = Visimisi::findorfail($id);
+        return view('admin.visimisi.edit', compact('visimisi'));
     }
 
     public function update(Request $request, $id)
     {
         $data = Visimisi::find($id);
         $data->update($request->all());
-        // Redirect setelah update berhasil
-        return redirect()->route('admin.visimisi')->with('success', 'Data Berhasil Diupdate');  
+        return redirect()->route('admin.visimisi')->with('success', 'Data Berhasil Diupdate');
     }
 
     public function destroy($id)
     {
         $visimisi = Visimisi::findOrFail($id);
         $visimisi->delete();
-    
         return redirect()->route('admin.visimisi')->with('success', 'Visimisi berhasil dihapus.');
     }
 }

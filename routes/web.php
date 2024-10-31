@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\OPACController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ContactController;
@@ -21,6 +22,7 @@ Route::get('/', function () {
 
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/information', [InformationController::class, 'index'])->name('information');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/opac', [OPACController::class, 'index'])->name('opac');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/download', [DownloadController::class, 'index'])->name('download');
