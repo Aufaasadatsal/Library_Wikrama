@@ -23,80 +23,85 @@
         </div>
         <div class="pb-3">
           <div class="flex border-b border-[#EFE3C3] px-4 justify-between">
-            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#FAC638] text-[#201A09] pb-[13px] pt-4 flex-1" href="#">
-              <p class="text-[#201A09] text-sm font-bold leading-normal tracking-[0.015em]">History</p>
+            <a class="nav-link flex flex-col items-center justify-center border-b-[3px] border-b-[#FAC638] text-[#201A09] pb-[13px] pt-4 flex-1 active" href="#history" data-target="history">
+              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">History</p>
             </a>
-            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4 flex-1" href="#">
+            <a class="nav-link flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4 flex-1" href="#vision-mission" data-target="vision-mission">
               <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Vision &amp; Mission</p>
             </a>
-            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4 flex-1" href="#">
-              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Our Portfolio</p>
-            </a>
-            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4 flex-1" href="#">
+            <a class="nav-link flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4 flex-1" href="#structure" data-target="structure">
               <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Organisational Structure</p>
             </a>
           </div>
         </div>
-        <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">History</h2>
-        <p class="text-[#201A09] text-base font-normal leading-normal pb-3 pt-1 px-4">
-         
-        </p>
-        <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Vision &amp; Mission</h2>
-        <p class="text-[#201A09] text-base font-normal leading-normal pb-3 pt-1 px-4">
-          Our vision is a city where every resident has the tools they need to learn, create, and grow. Our mission is to provide free and open access to information,
-          resources, and opportunities that inspire curiosity, build skills, and enrich lives.
-        </p>
-        <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Portfolio</h2>
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-          <div class="flex flex-col gap-3 pb-3">
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-              style='background-image: url("https://cdn.usegalileo.ai/sdxl10/3b0257ad-4962-46a8-a671-65f6c27a7c9e.png");'
-            ></div>
-            <div>
-              <p class="text-[#201A09] text-base font-medium leading-normal">Main Branch</p>
-              <p class="text-[#A07D1C] text-sm font-normal leading-normal">1000 Main Street</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3 pb-3">
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-              style='background-image: url("https://cdn.usegalileo.ai/sdxl10/c1762990-992e-4a1d-9e90-a05d52ad6db2.png");'
-            ></div>
-            <div>
-              <p class="text-[#201A09] text-base font-medium leading-normal">Digital Resources</p>
-              <p class="text-[#A07D1C] text-sm font-normal leading-normal">E-books, audiobooks, databases, and more</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3 pb-3">
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-              style='background-image: url("https://cdn.usegalileo.ai/sdxl10/e4d638d1-bbf2-4869-a3dd-8157f0e7dc14.png");'
-            ></div>
-            <div>
-              <p class="text-[#201A09] text-base font-medium leading-normal">Community Programs</p>
-              <p class="text-[#A07D1C] text-sm font-normal leading-normal">Storytimes, book clubs, workshops, and events</p>
-            </div>
-          </div>
-          <div class="flex flex-col gap-3 pb-3">
-            <div
-              class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
-              style='background-image: url("https://cdn.usegalileo.ai/sdxl10/c0c7ebdd-2978-47dc-99f1-a41d00f1a87c.png");'
-            ></div>
-            <div>
-              <p class="text-[#201A09] text-base font-medium leading-normal">Maker Spaces</p>
-              <p class="text-[#A07D1C] text-sm font-normal leading-normal">3D printers, laser cutters, sewing machines, and more</p>
-            </div>
-          </div>
+        <div id="history" class="content-section">
+          <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">History</h2>
+          <p class="text-[#201A09] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            Perpustakaan SMK Wikrama Bogor berada di Kampus SMK Wikrama Bogor Kelurahan Sindangsari, Kecamatan Bogor Timur, Kota Bogor didirikan pada tahun 1996. Secara fisik perpustakaan sekolah terletak di lantai 2 (dua) gedung Pajajaran yang merupakan gedung pertama yang dibangun, tepatnya berada di area bangunan seluas 96 m2. Lokasi ini berada di pusat kegiatan pembelajaran yang mudah dijangkau oleh peserta didik, pendidik dan tenaga kependidikan. Semenjak didirikan, keberadaan ruang perpustakaan SMK Wikrama Bogor memberikan manfaat bagi sivitas akademik sekolah bahkan masyarakat sekitar sekolah
+          </p>
         </div>
-        <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Organisational Structure</h2>
-        <p class="text-[#201A09] text-base font-normal leading-normal pb-3 pt-1 px-4">
-          The Library is governed by a board of directors, which is responsible for setting policies, managing finances, and hiring the library director. The library director
-          oversees the day-to-day operations of the library, including staff management, program development, and collection management. The library has a team of professional
-          librarians, paraprofessional staff, and volunteers who work together to provide excellent service to the community.
-        </p>
+        <div id="vision-mission" class="content-section hidden">
+          <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Vision &amp; Mission</h2>
+          @foreach ($visimisis as $visimisi)
+          <div class="mb-6 px-4">
+            <div class="mb-4">
+              <p class="text-[#A07D1C] text-lg font-semibold leading-tight mb-1">Visi:</p>
+              <p class="text-[#201A09] text-base font-normal leading-normal">{{ $visimisi->visi }}</p>
+            </div>
+            <div class="mb-4">
+              <p class="text-[#A07D1C] text-lg font-semibold leading-tight mb-1">Misi:</p>
+              <p class="text-[#201A09] text-base font-normal leading-normal">{{ $visimisi->misi }}</p>
+            </div>
+            <div>
+              <p class="text-[#A07D1C] text-lg font-semibold leading-tight mb-1">Motto:</p>
+              <p class="text-[#201A09] text-base font-normal leading-normal">{{ $visimisi->motto }}</p>
+            </div>
+          </div>
+          @endforeach
+        </div>
+        <div id="structure" class="content-section hidden">
+          <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Organisational Structure</h2>
+          <p class="text-[#201A09] text-base font-normal leading-normal pb-3 pt-1 px-4">
+            The library is managed by a dedicated team of professionals who ensure the smooth running of all operations and services
+          </p>
+        </div>
       </div>
     </div>
   </div>
-</div> 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.content-section');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('data-target');
+
+          // Remove active class from all links and reset border color
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            link.classList.add('text-[#A07D1C]');
+            link.classList.remove('text-[#201A09]');
+            link.classList.add('border-b-transparent');
+            link.classList.remove('border-b-[#FAC638]');
+          });
+
+          // Hide all sections
+          sections.forEach(section => section.classList.add('hidden'));
+
+          // Show the target section
+          document.getElementById(targetId).classList.remove('hidden');
+
+          // Add active class to the clicked link and set border color
+          this.classList.add('active');
+          this.classList.remove('text-[#A07D1C]');
+          this.classList.add('text-[#201A09]');
+          this.classList.remove('border-b-transparent');
+          this.classList.add('border-b-[#FAC638]');
+        });
+      });
+    });
+  </script>
+</div>
 @endsection

@@ -2,15 +2,8 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\Artikel;
-use Validator;
-=======
 use App\Models\Artikel;
 use Illuminate\Http\Request;
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
 
 class ArtikelController extends Controller
 {

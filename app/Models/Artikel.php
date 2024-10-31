@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Artikel extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
+
 
     protected $fillable = 
     [
@@ -18,6 +18,4 @@ class Artikel extends Model
         'image',
         'status'
     ];
-=======
->>>>>>> 56214c5c41d33d76a19f7074597dbb05176dac60
 }
