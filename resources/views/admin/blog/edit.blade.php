@@ -35,15 +35,11 @@
             </div>
         </div>
 
-        <!-- Status -->
-        <div class="space-y-2">
-            <label for="status" class="block text-gray-600 font-semibold">Status*</label>
-            <select id="status" name="status"
-                class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
-                <option value="aktif" >Aktif</option>
-                <option value="tidak aktif" >Tidak Aktif</option>
-            </select>
-        </div>
+        <select id="status" name="status"
+            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+            <option value="{{$blog->status == 'aktif' ? 'aktif' : 'tidak aktif'}}" {{ old('status', $blog->status) == 'aktif' ? 'selected' : '' }}>{{$blog->status == 'aktif' ? 'aktif' : 'tidak aktif'}}</option>
+            <option value="{{$blog->status == 'tidak aktif' ? 'aktif' : 'tidak aktif'}}" {{ old('status', $blog->status) == 'tidak aktif' ? 'selected' : '' }}>{{$blog->status == 'tidak aktif' ? 'aktif' : 'tidak aktif'}}</option>
+        </select>
 
         <!-- Tombol Submit -->
         <button type="submit"
