@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\OPACController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ContactController;
