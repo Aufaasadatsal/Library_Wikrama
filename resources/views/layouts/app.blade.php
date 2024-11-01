@@ -22,6 +22,8 @@
                 <a href="/admin/user" class="block py-2 px-4 hover:bg-gray-700">Users</a>
                 <a href="/admin/visimisi" class="block py-2 px-4 hover:bg-gray-700">Visi Misi</a>
                 <a href="/admin/bukutamu" class="block py-2 px-4 hover:bg-gray-700">Buku Tamu</a>
+                <a href="/admin/buku" class="block py-2 px-4 hover:bg-gray-700">Buku</a>
+                <a href="/admin/funfact" class="block py-2 px-4 hover:bg-gray-700">Funfact</a>
             </nav>
         </div>
         <div class="w-5/6 p-6">

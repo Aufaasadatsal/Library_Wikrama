@@ -5,15 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Buku extends Model
 {
     use HasFactory;
 
-    protected $fillable =
-    [
+    protected $fillable = [
         'judul',
-        'isi',
-        'image',
-        'status'
+        'penulis',
+        'penerbit',
+        'tahun_terbit',
+        'isbn',
+        'gambar',
     ];
 }
+

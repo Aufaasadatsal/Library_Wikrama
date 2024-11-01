@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Funfact;
 use Illuminate\Http\Request;
 
-class GaleriController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $funfacts = Funfact::all(); // This returns a collection even if empty
+        return view('index', compact('funfacts'));
     }
 
     /**
