@@ -13,7 +13,7 @@
                     <button class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
                 </div>
                 <div>
-                    <button onclick="window.location.href='/admin/create-galeri'" class="bg-blue-500 text-white px-4 py-2 rounded">
+                    <button onclick="window.location.href='{{ route('admin.create-galeri') }}'" class="bg-blue-500 text-white px-4 py-2 rounded">
                         Add
                     </button>
                 </div>
@@ -34,32 +34,34 @@
                         </tr>
                     </thead>
                     <tbody class="text-gray-600 text-sm font-light">
-                        @for ($i = 1; $i <= 3; $i++)
+                        @foreach ($galeris as $galeri)
                         <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-3 px-6 text-left whitespace-nowrap">{{ $i }}</td>
+                            <td class="py-3 px-6 text-left whitespace-nowrap">{{ $loop->iteration }}</td>
                             <td class="py-3 px-6 text-left">
-                                <img src="{{ asset('images/mentahan.jpg') }}" alt="Content Image" class="w-auto h-auto mx-auto">
+                                <img src="{{ asset('storage/' . $galeri->file)}}" alt="" class="w-auto h-auto mx-auto">
                             </td>
-                            <td class="py-3 px-6 text-center">Lorem ipsum</td>
-                            <td class="py-3 px-6 text-center">Lorem ipsum</td>
-                            <td class="py-3 px-6 text-center">Bro Jeki</td>
-                            <td class="py-3 px-6 text-center">02/01/2000</td>
+                            <td class="py-3 px-6 text-center">{{ $galeri->kategori }}</td>
+                            <td class="py-3 px-6 text-center">{{ $galeri->keterangan }}</td>
+                            <td class="py-3 px-6 text-center">{{ $galeri->oleh }}</td>
+                            <td class="py-3 px-6 text-center">{{ $galeri->tanggal }}</td>
                             <td class="py-3 px-6 text-center">
-                                <button onclick="toggleOptions({{ $i }})" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">
+                                <button onclick="toggleOptions({{ $galeri->id }})" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">
                                     Lihat
                                 </button>
-
                                 <!-- Dropdown Opsi -->
-                                <div id="options-{{ $i }}" class="hidden mt-2 space-y-2">
-                                    <a href="{{ route('admin.edit-galeri', $i) }}"
-                                       class="block bg-gray-100 px-4 py-1 rounded hover:bg-blue-100">Edit</a>
-
-                                    <button onclick="confirmDelete({{ $i }})"
+                                <div id="options-{{ $galeri->id }}" class="hidden mt-2 space-y-2">
+                                    <a href="{{ route('admin.edit-galeri', $galeri->id) }}"
+                                            class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
+                                    <button onclick="confirmDelete({{ $galeri->id }})"
                                             class="block bg-red-100 px-4 py-1 rounded hover:bg-red-200">Hapus</button>
+                                        <form id="delete-form-{{ $galeri->id }}" action="{{ route('admin.delete-galeri', $galeri->id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                 </div>
                             </td>
                         </tr>
-                        @endfor
+                        @endforeach
                     </tbody>
                 </table>
             </main>
@@ -73,10 +75,9 @@
         }
 
         function confirmDelete(id) {
-            const confirmed = confirm('Apakah Anda yakin ingin menghapus file ini?');
+            const confirmed = confirm('Apakah Anda yakin ingin menghapus visi/misi ini?');
             if (confirmed) {
-                // Redirect ke endpoint delete sesuai ID
-                window.location.href = `/galeri/${id}/delete`; // Sesuaikan dengan endpoint penghapusan
+                document.getElementById(`delete-form-${id}`).submit();
             }
         }
     </script>

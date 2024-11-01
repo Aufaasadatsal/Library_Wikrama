@@ -4,14 +4,6 @@
 <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg w-full">
     <h2 class="text-3xl font-bold mb-4">Add Profile</h2>
 
-    <div class="space-y-2">
-        <label for="file" class="block text-gray-600 font-semibold">Upload File*</label>
-        <input type="file" id="file" name="file"
-            class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-            accept="image/*, .pdf, .doc, .docx" required>
-        <p class="text-sm text-gray-400">Format: JPG, PNG, PDF, DOC (max: 10 MB)</p>
-    </div>
-
     <form action="{{ route('admin.store-profil') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
         @csrf
         <div class="space-y-2">

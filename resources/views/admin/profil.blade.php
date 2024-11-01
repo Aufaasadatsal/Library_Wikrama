@@ -43,20 +43,20 @@
                             </td>
                             <td class="py-3 px-6 text-left">
                                 <img src="{{ asset('storage/' . $profil->gambar)}}" alt="" class="max-w-xs h-auto mx-auto">
-                            </td>                            
+                            </td>
                             <td class="py-3 px-6 text-center">
                                 <button onclick="toggleOptions(1)" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">
                                     Lihat
                                 </button>
                                 <!-- Dropdown Opsi -->
                                 <div id="options-1" class="hidden mt-2 space-y-2">
-                                    <a href="{{ route('admin.edit-profil', 1) }}" class="block bg-gray-100 px-4 py-1 rounded hover:bg-blue-100">Edit</a>
-                                    <button onclick="confirmDelete(1)"
+                                    <a href="{{ route('admin.edit-profil', $profil->id) }}" class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
+                                    <button onclick="confirmDelete({{ $profil->id }})"
                                             class="block bg-red-100 px-4 py-1 rounded hover:bg-red-200">Hapus</button>
-                                            <form id="delete-form-{{ $profil->id }}" action="{{ route('admin.delete-profil', $profil->id) }}" method="POST" style="display: none;">
-                                                @csrf
-                                                @method('DELETE')
-                                            </form>
+                                        <form id="delete-form-{{ $profil->id }}" action="{{ route('admin.delete-profil', $profil->id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                 </div>
                             </td>
                         </tr>

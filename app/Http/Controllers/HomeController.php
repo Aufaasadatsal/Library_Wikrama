@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Visimisi;
+
+use App\Models\Funfact;
 use Illuminate\Http\Request;
 
-class VisimisiController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $funfacts = Funfact::all(); // This returns a collection even if empty
+        return view('index', compact('funfacts'));
     }
 
     /**
@@ -34,7 +36,7 @@ class VisimisiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Visimisi $visimisi)
+    public function show(string $id)
     {
         //
     }
@@ -42,7 +44,7 @@ class VisimisiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Visimisi $visimisi)
+    public function edit(string $id)
     {
         //
     }
@@ -50,7 +52,7 @@ class VisimisiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Visimisi $visimisi)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,7 +60,7 @@ class VisimisiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Visimisi $visimisi)
+    public function destroy(string $id)
     {
         //
     }

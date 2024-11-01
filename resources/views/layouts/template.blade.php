@@ -47,6 +47,7 @@
                 <div class="flex items-center gap-4 lg:gap-9">
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="profile">Profile</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="information">Information</a>
+                    <a class="text-[#0e141b] text-sm font-medium leading-normal" href="blog">Blog</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="opac">OPAC</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="contact">Contact</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="download">Download</a>

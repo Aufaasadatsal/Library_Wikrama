@@ -12,7 +12,7 @@
                     <button class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
                 </div>
                 <div>
-                    <button onclick="window.location.href='/admin/create-blog'" class="bg-blue-500 text-white px-4 py-2 rounded">
+                    <button onclick="window.location.href='{{ route('admin.create-blog') }}'" class="bg-blue-500 text-white px-4 py-2 rounded">
                         Add
                     </button>
                 </div>
@@ -31,35 +31,37 @@
                         </tr>
                     </thead>
                     <tbody class="text-gray-600 text-sm font-light">
-                        @for ($i = 1; $i <= 3; $i++)
+                        @foreach ($blogs as $blog)
                         <tr class="border-b border-gray-200 hover:bg-gray-100">
-                            <td class="py-3 px-6 text-left whitespace-nowrap">{{ $i }}</td>
-                            <td class="py-3 px-6 text-left">Judul {{ $i }}</td>
+                            <td class="py-3 px-6 text-left whitespace-nowrap">{{ $loop->iteration }}</td>
+                            <td class="py-3 px-6 text-left">{{ $blog->judul }}</td>
                             <td class="py-3 px-6 text-left">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                {{ $blog->isi }}
                             </td>
                             <td class="py-3 px-6 text-center">
-                                <img src="{{ asset('images/mentahan.jpg') }}" alt="Content Image" class="w-auto h-auto mx-auto">
+                                <img src="{{ asset('storage/' . $blog->image)}}" alt="" class="w-auto h-auto mx-auto">
                             </td>
                             <td class="py-3 px-6 text-center">
                                 <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Aktif</span>
                             </td>
                             <td class="py-3 px-6 text-center">
-                                <button onclick="toggleOptions({{ $i }})" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">
+                                <button onclick="toggleOptions({{ $blog->id }})" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">
                                     Lihat
                                 </button>
-
                                 <!-- Dropdown Opsi -->
-                                <div id="options-{{ $i }}" class="hidden mt-2 space-y-2">
-                                    <a href="{{ route('admin.edit-blog', $i) }}"
-                                       class="block bg-gray-100 px-4 py-1 rounded hover:bg-blue-100">Edit</a>
-
-                                    <button onclick="confirmDelete({{ $i }})"
+                                <div id="options-{{ $blog->id }}" class="hidden mt-2 space-y-2">
+                                    <a href="{{ route('admin.edit-blog', $blog->id) }}"
+                                            class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
+                                    <button onclick="confirmDelete({{ $blog->id }})"
                                             class="block bg-red-100 px-4 py-1 rounded hover:bg-red-200">Hapus</button>
+                                        <form id="delete-form-{{ $blog->id }}" action="{{ route('admin.delete-blog', $blog->id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                 </div>
                             </td>
                         </tr>
-                        @endfor
+                        @endforeach
                     </tbody>
                 </table>
             </main>
@@ -73,9 +75,9 @@
         }
 
         function confirmDelete(id) {
-            const confirmed = confirm('Apakah Anda yakin ingin menghapus blog ini?');
+            const confirmed = confirm('Apakah Anda yakin ingin menghapus visi/misi ini?');
             if (confirmed) {
-                window.location.href = `/blogs/${id}/delete`; // Adjust to match delete endpoint
+                document.getElementById(`delete-form-${id}`).submit();
             }
         }
     </script>
