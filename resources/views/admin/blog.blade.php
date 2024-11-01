@@ -42,7 +42,7 @@
                                 <img src="{{ asset('storage/' . $blog->image)}}" alt="" class="w-auto h-auto mx-auto">
                             </td>
                             <td class="py-3 px-6 text-center">
-                                <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">Aktif</span>
+                                <span class="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">{{$blog->status}}</span>
                             </td>
                             <td class="py-3 px-6 text-center">
                                 <button onclick="toggleOptions({{ $blog->id }})" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">

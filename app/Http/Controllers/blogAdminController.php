@@ -59,7 +59,7 @@ class blogAdminController extends Controller
         $request->validate([
             'judul' => 'required|string|max:255',
             'isi' => 'required|string',
-            'status' => 'required|in:aktif,tidak aktif',
+            'status' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB max
         ]);
 
@@ -76,7 +76,7 @@ class blogAdminController extends Controller
             $path = $request->file('image')->store('public/blog'); // simpan di folder 'storage/app/public/galeri'
             $blog->image = str_replace('public/', '', $path); // Simpan path gambar di database tanpa 'public/'
         }
-        // dd($request->isi);
+        // dd($request->status);
         // Update data lainnya
         $blog->judul = $request->input('judul');
         $blog->isi = $request->input('isi');

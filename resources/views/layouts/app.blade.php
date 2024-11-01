@@ -7,6 +7,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-wikrama.png') }}">
 </head>
 <body class="bg-gray-800 text-white">
     <div class="flex">
@@ -30,7 +31,7 @@
             <header class="flex justify-between items-center mb-6">
                 <h2 class="text-2xl font-bold">Dashboard</h2>
                 <div class="flex items-center">
-                    <span class="mr-4">Bro_Jeki</span>
+                    <span class="mr-4">Admin</span>
                     <img src="{{ asset('profile.jpg') }}" alt="Profile" class="w-10 h-10 rounded-full">
                 </div>
             </header>
