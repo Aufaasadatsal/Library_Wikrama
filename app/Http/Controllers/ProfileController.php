@@ -13,4 +13,6 @@ class ProfileController extends Controller
         $data['visimisis'] = Visimisi::all();
         return view('profile', $data);
     }
+
+
 }
