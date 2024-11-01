@@ -4,7 +4,7 @@
 <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg w-full">
     <h2 class="text-3xl font-bold mb-4">Add Data</h2>
 
-    <form action="" method="POST" enctype="multipart/form-data" class="space-y-6">
+    <form action="{{ route('admin.store-galeri') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
         @csrf <!-- Token CSRF untuk keamanan -->
 
         <!-- Upload File -->

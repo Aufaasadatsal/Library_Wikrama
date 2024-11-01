@@ -66,7 +66,6 @@ class profilAdminController extends Controller
     {
         // Find the profil by id or fail
         $profil = Profil::findOrFail($id);
-
         // Validate the incoming request
         $validate = $request->validate([
             'judul_profil' => 'required',
@@ -74,14 +73,12 @@ class profilAdminController extends Controller
             'status' => 'required',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Optional image
         ]);
-
         // Check if a new image file is being uploaded
         if ($request->hasFile('gambar')) {
             // Delete the old image if it exists
             if ($profil->gambar) {
                 Storage::disk('public')->delete($profil->gambar);
             }
-
             // Store the new image and update the validate array
             $validate['gambar'] = $request->file('gambar')->store('profil', 'public');
         } else {

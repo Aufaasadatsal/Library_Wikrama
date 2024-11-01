@@ -63,45 +63,10 @@ class GaleriAdminController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, cr $cr)
     {
-        // Validasi input
-        $request->validate([
-            'kategori' => 'required|string|max:255',
-            'keterangan' => 'required|string|max:255',
-            'oleh' => 'required|string|max:255',
-            'tanggal' => 'required|date',
-            'gambar' => 'nullable|image|mimes:jpg,png,jpeg,gif,svg|max:10240' // validasi gambar, opsional
-        ]);
-
-        // Temukan galeri berdasarkan ID
-        $galeri = Galeri::findOrFail($id);
-
-        // Jika ada gambar yang diupload
-        if ($request->hasFile('gambar')) {
-            // Hapus gambar lama jika ada
-            if ($galeri->file) {
-                Storage::delete('public/' . $galeri->file);
-            }
-
-            // Upload gambar baru
-            $path = $request->file('gambar')->store('public/galeri'); // simpan di folder 'storage/app/public/galeri'
-            $galeri->file = str_replace('public/', '', $path); // Simpan path gambar di database tanpa 'public/'
-        }
-
-        // Update data lainnya
-        $galeri->kategori = $request->input('kategori');
-        $galeri->keterangan = $request->input('keterangan');
-        $galeri->oleh = $request->input('oleh');
-        $galeri->tanggal = $request->input('tanggal');
-
-        // Simpan perubahan
-        $galeri->save();
-
-        // Redirect kembali dengan pesan sukses
-        return redirect()->route('admin.galeri')->with('success', 'Data galeri berhasil diupdate');
+        //
     }
-
 
     /**
      * Remove the specified resource from storage.

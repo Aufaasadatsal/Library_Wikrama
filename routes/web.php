@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\OPACController;
 use App\Http\Controllers\InformationController;
 use App\Http\Controllers\ContactController;
@@ -38,7 +39,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/create-blog', [BlogAdminController::class, 'create'])->name('create-blog');
     Route::post('/store-blog', [BlogAdminController::class, 'store'])->name('store-blog');
     Route::get('/edit-blog/{id}', [BlogAdminController::class, 'edit'])->name('edit-blog');
-    Route::get('/show-blog/{id}', [BlogAdminController::class, 'show'])->name('show-blog');
+    // Route::get('/show-blog/{id}', [BlogAdminController::class, 'show'])->name('show-blog');
     Route::put('/update-blog/{id}', [BlogAdminController::class, 'update'])->name('update-blog');
     Route::delete('/delete-blog/{id}', [BlogAdminController::class, 'destroy'])->name('delete-blog');
 

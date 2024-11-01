@@ -40,6 +40,7 @@ class blogAdminController extends Controller
     }
 
 
+
     public function show($id)
     {
         $data['blog'] = Blog::findorfail($id);
@@ -71,7 +72,6 @@ class blogAdminController extends Controller
             if ($blog->image) {
                 Storage::delete('public/' . $blog->image);
             }
-
             // Upload gambar baru
             $path = $request->file('image')->store('public/blog'); // simpan di folder 'storage/app/public/galeri'
             $blog->image = str_replace('public/', '', $path); // Simpan path gambar di database tanpa 'public/'
