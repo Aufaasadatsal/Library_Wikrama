@@ -47,5 +47,3 @@
             </div>
         </footer>
     @endsection
-</body>
-</html>

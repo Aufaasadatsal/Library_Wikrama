@@ -14,7 +14,7 @@
                 </div>
                 <div>
                     <button onclick="window.location.href='{{ route('admin.create-visimisi')}}'" class="bg-blue-500 text-white px-4 py-2 rounded">
-                        Add
+                        Add Visimisi
                     </button>
                 </div>
             </header>
@@ -43,11 +43,7 @@
                                 </button>
                                 <!-- Dropdown Opsi -->
                                 <div id="options-{{ $visimisi->id }}" class="hidden mt-2 space-y-2">
-<<<<<<< HEAD
-                                    <a href="{{ route('admin.edit-visimisi', $visimisi->id) }}"
-=======
                                     <a href="{{ route('admin.edit-visimisi', $visimisi->id) }}" 
->>>>>>> ec2e496696e346519d1c182d9d2e5368242b87bf
                                         class="block bg-gray-green px-4 py-1 rounded hover:bg-green-200">Edit</a>
                                     <button onclick="confirmDelete({{ $visimisi->id }})"
                                         class="block bg-red-100 px-4 py-1 rounded hover:bg-red-200">Hapus</button>

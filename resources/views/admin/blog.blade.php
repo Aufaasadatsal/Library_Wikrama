@@ -13,11 +13,11 @@
                 </div>
                 <div>
                     <button onclick="window.location.href='{{ route('admin.create-blog') }}'" class="bg-blue-500 text-white px-4 py-2 rounded">
-                        Add
+                        Add Blog
                     </button>
                 </div>
-            </header>
-
+                </header>
+                
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-4">
                 <table class="w-full bg-white shadow-md rounded">
                     <thead>

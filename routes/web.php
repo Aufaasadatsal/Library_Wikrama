@@ -85,6 +85,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('/delete-buku/{id}', [bukuAdminController::class, 'destroy'])->name('delete-buku');
 
     Route::get('/funfact', [FunfactController::class, 'index'])->name('funfact');
+    Route::get('/create-funfact', [FunfactController::class, 'create'])->name('create-funfact');
+    Route::post('/store-funfact', [FunfactController::class, 'store'])->name('store-funfact');
     Route::get('/edit-funfact/{id}', [FunfactController::class, 'edit'])->name('edit-funfact');
     Route::put('/update-funfact/{id}', [FunfactController::class, 'update'])->name('update-funfact');
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Funfact;
 use Illuminate\Http\Request;
 
@@ -12,34 +13,34 @@ class FunfactController extends Controller
      */
     public function index()
     {
-        $funfacts = Funfact::all(); // Retrieve all funfacts
-        return view('admin.funfact', compact('funfacts')); // Pass the data to the view
+        $funfacts = FunFact::all(); // Mengambil semua data fun facts
+        return view('admin.funfact', compact('funfacts')); // Pastikan nama tampilan sesuai
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    // public function create()
-    // {
-    //     return view('admin.funfacts.create'); // Return the view to create a new funfact
-    // }
+    public function create()
+    {
+        return view('admin.funfact.create'); // Return the view to create a new funfact
+    }
 
     // /**
     //  * Store a newly created resource in storage.
     //  */
-    // public function store(Request $request)
-    // {
-    //     $validatedData = $request->validate([
-    //         'siswa_teraktif' => 'required|string|max:255',
-    //         'rayon_teraktif' => 'required|string|max:255',
-    //         'rombel_teraktif' => 'required|string|max:255',
-    //         'buku_terfavorit' => 'required|string|max:255',
-    //     ]);
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'siswa_teraktif' => 'required|string|max:255',
+            'rayon_teraktif' => 'required|string|max:255',
+            'rombel_teraktif' => 'required|string|max:255',
+            'buku_terfavorit' => 'required|string|max:255',
+        ]);
 
-    //     Funfact::create($validatedData); // Create a new funfact
+        Funfact::create($validatedData); // Create a new funfact
 
-    //     return redirect()->route('admin.funfacts.index')->with('success', 'Funfact created successfully.'); // Redirect with success message
-    // }
+        return redirect()->route('admin.funfact')->with('success', 'Funfact created successfully.'); // Redirect with success message
+    }
 
     /**
      * Display the specified resource.

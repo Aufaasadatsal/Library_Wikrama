@@ -11,8 +11,12 @@
                     <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded">2</button>
                     <button class="px-4 py-2 bg-blue-500 text-white rounded">Next</button>
                 </div>
+                <div>
+                    <button onclick="window.location.href='{{ route('admin.create-funfact') }}'" class="bg-blue-500 text-white px-4 py-2 rounded">
+                        Add FunFact
+                    </button>
             </header>
-
+            
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 p-4">
                 <table class="w-full bg-white shadow-md rounded">
                     <thead>
@@ -40,7 +44,7 @@
                                 <!-- Dropdown Opsi -->
                                 <div id="options-{{ $funfact->id }}" class="hidden mt-2 space-y-2">
                                     <a href="{{ route('admin.edit-funfact', $funfact->id) }}"
-                                       class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
+                                        class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
                                 </div>
                             </td>
                         </tr>

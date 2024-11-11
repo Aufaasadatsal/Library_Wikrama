@@ -14,7 +14,7 @@ class BlogController extends Controller
         // Check if a search term is present
         if ($request->has('search') && $request->search) {
             $query->where('judul', 'LIKE', '%' . $request->search . '%')
-                  ->orWhere('isi', 'LIKE', '%' . $request->search . '%');
+                ->orWhere('isi', 'LIKE', '%' . $request->search . '%');
         }
 
         $data['blogs'] = $query->get();

@@ -20,8 +20,7 @@
             </div>
           </label>
         </div>
-
-
+        
         <!-- New Releases Section -->
         <h2 class="text-[#1b130e] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Daftar Buku</h2>
         <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
@@ -34,6 +33,9 @@
             <div>
               <p class="text-[#1b130e] text-base font-medium leading-normal">{{ $book->judul }}</p>
               <p class="text-[#96684f] text-sm font-normal leading-normal">{{ $book->penulis }}</p>
+              <p class="text-[#96684f] text-sm font-normal leading-normal">{{ $book->penerbit }}</p>
+              <p class="text-[#96684f] text-sm font-normal leading-normal">{{ $book->tahun_terbit }}</p>
+              <p class="text-[#96684f] text-sm font-normal leading-normal">{{ $book->isbn }}</p>
             </div>
           </div>
           @endforeach
