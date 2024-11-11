@@ -28,17 +28,18 @@ class blogAdminController extends Controller
             'status' => 'required|in:aktif,tidak aktif',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB max
         ]);
-    
+
         if ($request->hasFile('image')) {
             $validatedData['image'] = $request->file('image')->store('blog', 'public');
         }
-    
+
         Blog::create($validatedData);
-    
+
         // Redirect to a specific page after success
         return redirect()->route('admin.blog')->with('success', 'Blog berhasil ditambahkan!');
     }
-    
+
+
 
     public function show($id)
     {
@@ -61,17 +62,16 @@ class blogAdminController extends Controller
             'status' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240', // 10MB max
         ]);
-    
+
         // Temukan galeri berdasarkan ID
         $blog = Blog::findOrFail($id);
-    
+
         // Jika ada gambar yang diupload
         if ($request->hasFile('image')) {
             // Hapus gambar lama jika ada
             if ($blog->image) {
                 Storage::delete('public/' . $blog->image);
             }
-    
             // Upload gambar baru
             $path = $request->file('image')->store('public/blog'); // simpan di folder 'storage/app/public/galeri'
             $blog->image = str_replace('public/', '', $path); // Simpan path gambar di database tanpa 'public/'
@@ -82,10 +82,10 @@ class blogAdminController extends Controller
         $blog->isi = $request->input('isi');
         $blog->status = $request->input('status');
         $blog->image = $request->input('image') ?? $blog->image;
-    
+
         // Simpan perubahan
         $blog->save();
-    
+
         // Redirect kembali dengan pesan sukses
         return redirect()->route('admin.blog')->with('success', 'Data galeri berhasil diupdate');
     }

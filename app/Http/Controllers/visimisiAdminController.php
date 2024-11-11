@@ -42,6 +42,7 @@ class visimisiAdminController extends Controller
     {
         $data = Visimisi::find($id);
         $data->update($request->all());
+        // Redirect setelah update berhasil
         return redirect()->route('admin.visimisi')->with('success', 'Data Berhasil Diupdate');
     }
 

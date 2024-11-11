@@ -27,28 +27,40 @@
         <div class="pb-3">
           <div class="flex border-b border-[#EFE3C3] px-4 gap-8">
             <a class="flex flex-col items-center justify-center border-b-[3px] border-b-[#FAC638] text-[#201A09] pb-[13px] pt-4" href="#">
-              <p class="text-[#201A09] text-sm font-bold leading-normal tracking-[0.015em]">About</p>
+              <p class="text-[#201A09] text-sm font-bold leading-normal tracking-[0.015em]">Tentang</p>
             </a>
             <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4" href="#">
-              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Services</p>
+              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Layanan</p>
             </a>
             <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4" href="#">
-              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Facilities</p>
-            </a>
-            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4" href="#">
-              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Opening Hours</p>
-            </a>
-            <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#A07D1C] pb-[13px] pt-4" href="#">
-              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Membership</p>
+              <p class="text-[#A07D1C] text-sm font-bold leading-normal tracking-[0.015em]">Fasilitas</p>
             </a>
           </div>
         </div>
-        <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About the Library</h2>
+        <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Tentang Perpustakaan</h2>
         <p class="text-[#201A09] text-base font-normal leading-normal pb-3 pt-1 px-4">
-          The library offers a wide range of services to support students and faculty in their research and educational needs. The library has a collection of over 400,000
-          volumes and provides access to thousands of electronic resources, including e-books, e-journals, databases, and more. Our friendly and knowledgeable staff is here to
-          help you with your information needs. Whether you need help finding a book, using a database, or citing your sources, we are here to help.
+            <strong>Identitas Perpustakaan</strong><br>
+            <strong>Nama Perpustakaan:</strong> Perpustakaan SMK Wikrama<br>
+            <strong>Nama Kepala Perpustakaan:</strong> Jakaria, S.E<br>
+            <strong>Nama Pustakawati:</strong> Danang Andrian Wicaksana<br>
+            <strong>Nomor SK Pendirian Perpustakaan:</strong> 421.5/0036/SMK Wikrama/IX/2008<br>
+            <strong>Alamat:</strong> Jl. Raya Wangun Kel. Sindangsari Bogor<br>
+            <strong>Kecamatan:</strong> Bogor Timur<br>
+            <strong>Kabupaten / Kota:</strong> Bogor<br>
+            <strong>Propinsi:</strong> Jawa Barat<br>
+            <strong>Kode Pos:</strong> 16720<br>
+            <strong>Telepon & Faksimili:</strong> (0251) 8242411<br>
+            <strong>E-mail:</strong> prohumasi@smkwikrama.net<br>
+            <strong>Luas Gedung Perpustakaan:</strong> 96 M<sup>2</sup><br>
+            <strong>Status Kepemilikan Gedung Perpustakaan:</strong> Milik sendiri<br>
+            <strong>Lokasi Perpustakaan:</strong> Jarak di Pusat kegiatan pembelajaran<br>
+            <strong>Sasaran</strong><br>
+            1. Meningkatnya budaya membaca masyarakat sekolah<br>
+            2. Meningkatnya masyarakat pengunjung perpustakaan<br>
+            3. Meningkatnya pelayanan perpustakaan<br>
+            4. Terpenuhinya fungsi perpustakaan sebagai pusat informasi masyarakat sekolah
         </p>
+
         <h2 class="text-[#201A09] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Services</h2>
         <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
           <div class="flex flex-1 gap-3 rounded-lg border border-[#EFE3C3] bg-[#FBF8EF] p-4 flex-col">
@@ -146,5 +158,5 @@
       </div>
     </div>
   </div>
-</div>    
+</div>
 @endsection

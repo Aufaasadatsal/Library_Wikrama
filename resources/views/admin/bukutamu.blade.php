@@ -14,7 +14,7 @@
                 </div>
                 <div>
                     <button onclick="window.location.href='{{ route('admin.create-bukutamu') }}'" class="bg-blue-500 text-white px-4 py-2 rounded">
-                        Add
+                        Add Bukutamu
                     </button>
                 </div>
             </header>

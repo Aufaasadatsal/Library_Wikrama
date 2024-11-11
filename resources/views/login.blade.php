@@ -13,10 +13,11 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.icon8.com/vue-uikit/1.0.0/vue-uikit.css">
+    <link rel="icon" type="image/png" href="/images/wikrama-logo.png">
 </head>
-<body class="bg-gray-50 dark:bg-gray-700">
-    <body class="bg-gray-50 dark:bg-gray-700">
-        <div id="header" class="p-4 bg-white dark:bg-gray-100 flex items-center justify-center shadow-lg"> <!-- Change justify-between to justify-center -->
+<body class="bg-gray-50">
+    <body class="bg-gray-50">
+        <div id="header" class="p-4 bg-white flex items-center justify-center shadow-lg"> <!-- Change justify-between to justify-center -->
             <div class="flex items-center">
                 <p class="font-semibold text-sm text-center">Web <span>Perpustakaan</span></p> <!-- Add text-center class -->
             </div>

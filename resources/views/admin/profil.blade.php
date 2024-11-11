@@ -14,7 +14,7 @@
                 </div>
                 <div>
                     <button onclick="window.location.href='{{ route('admin.create-profil')}}'" class="bg-blue-500 text-white px-4 py-2 rounded">
-                        Add
+                        Add Profil
                     </button>
                 </div>
             </header>
@@ -43,7 +43,7 @@
                             </td>
                             <td class="py-3 px-6 text-left">
                                 <img src="{{ asset('storage/' . $profil->gambar)}}" alt="" class="max-w-xs h-auto mx-auto">
-                            </td>                            
+                            </td>
                             <td class="py-3 px-6 text-center">
                                 <button onclick="toggleOptions(1)" class="bg-blue-500 text-white px-3 py-1 rounded text-xs">
                                     Lihat

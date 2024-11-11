@@ -16,8 +16,8 @@ class Galeri extends Model
         'oleh',
         'tanggal',
     ];
-    
-    public function kategori() 
+
+    public function kategori()
     {
         return $this->belongsTo(GaleriKategori::class, 'kategori_id');
     }

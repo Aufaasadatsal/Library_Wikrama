@@ -7,7 +7,7 @@
     <title>@yield('title', 'Perpustakaan Wikrama')</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
-    <link rel="icon" type="image/png" href="{{ asset('images/logo-wikrama.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/wikrama-logo.png') }}">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style>
         .mobile-menu { display: none; }
@@ -39,7 +39,7 @@
         <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-4 py-3 lg:px-10">
             <div class="flex items-center gap-3">
                 <a href="/" class="flex items-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo Wikrama" class="h-8 w-auto lg:h-10" />
+                    <img src="{{ asset('images/wikrama-logo.png') }}" alt="Logo Wikrama" class="h-8 w-auto lg:h-10" />
                     <p class="text-[#0e141b] text-base font-bold leading-normal ml-2 lg:text-lg">Perpustakaan Wikrama</p>
                 </a>
             </div>
@@ -47,6 +47,7 @@
                 <div class="flex items-center gap-4 lg:gap-9">
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="profile">Profile</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="information">Information</a>
+                    <a class="text-[#0e141b] text-sm font-medium leading-normal" href="blog">Blog</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="opac">OPAC</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="blog">Blog</a>
                     <a class="text-[#0e141b] text-sm font-medium leading-normal" href="contact">Contact</a>
