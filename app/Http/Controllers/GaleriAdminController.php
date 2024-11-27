@@ -63,7 +63,7 @@ class GaleriAdminController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request)
     {
         //
     }

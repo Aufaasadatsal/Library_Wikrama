@@ -4,10 +4,6 @@
 <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg w-full">
     <h2 class="text-3xl font-bold mb-4">Add Profile</h2>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ec2e496696e346519d1c182d9d2e5368242b87bf
     <form action="{{ route('admin.store-profil') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
         @csrf
         <div class="space-y-2">
