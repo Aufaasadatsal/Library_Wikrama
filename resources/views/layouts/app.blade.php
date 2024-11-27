@@ -20,6 +20,7 @@
                 <a href="/admin" class="block py-2 px-4 hover:bg-gray-700">Dashboard</a>
                 <a href="/admin/blog" class="block py-2 px-4 hover:bg-gray-700">Blog</a>
                 <a href="/admin/galeri" class="block py-2 px-4 hover:bg-gray-700">Galeri</a>
+                <a href="/admin/peminjaman" class="block py-2 px-4 hover:bg-gray-700">Peminjaman</a>
                 <a href="/admin/profil" class="block py-2 px-4 hover:bg-gray-700">Profile</a>
                 <a href="/admin/user" class="block py-2 px-4 hover:bg-gray-700">Users</a>
                 <a href="/admin/visimisi" class="block py-2 px-4 hover:bg-gray-700">Visi Misi</a>
