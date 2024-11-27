@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\eBookController;
 use App\Http\Controllers\IndexAdminController;
+use App\Http\Controllers\PeminjamanAdminController;
 use App\Http\Controllers\BlogAdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GaleriAdminController;
@@ -51,7 +52,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::put('/update-galeri/{id}', [GaleriAdminController::class, 'update'])->name('update-galeri');
     Route::delete('/delete-galeri/{id}', [GaleriAdminController::class, 'destroy'])->name('delete-galeri');
 
+
     //Profil
+    Route::get('/peminjaman', [PeminjamanAdminController::class, 'index'])->name('peminjaman');
+
+
     Route::get('/profil', [ProfilAdminController::class, 'index'])->name('profil');
     Route::get('/create-profil', [ProfilAdminController::class, 'create'])->name('create-profil');
     Route::post('/store-profil', [ProfilAdminController::class, 'store'])->name('store-profil');
