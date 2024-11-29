@@ -55,6 +55,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     //Profil
     Route::get('/peminjaman', [PeminjamanAdminController::class, 'index'])->name('peminjaman');
+    Route::get('/create-peminjaman', [PeminjamanAdminController::class, 'create'])->name('create-peminjaman');
 
 
     Route::get('/profil', [ProfilAdminController::class, 'index'])->name('profil');

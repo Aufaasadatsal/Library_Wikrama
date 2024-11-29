@@ -10,4 +10,14 @@ class PeminjamanAdminController extends Controller
     {
         return view('admin.peminjaman');
     }
+
+    public function create(Request $request)
+    {
+        return view('admin.peminjaman.create');
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
 }
