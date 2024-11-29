@@ -39,7 +39,7 @@ class profilAdminController extends Controller
         ]);
         $validate['gambar'] = $request->file('gambar')->store('profil', 'public');
         Profil::create($validate);
-        return redirect()->route('admin.profil')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect()->route('admin.profil' )->with('success', 'Data Profil Berhasil Ditambahkan');
     }
 
     /**
@@ -89,7 +89,7 @@ class profilAdminController extends Controller
         // Update the profil with validated data
         $profil->update($validate);
 
-        return redirect()->route('admin.profil')->with('success', 'Profil berhasil diperbarui');
+        return redirect()->route('admin.profil')->with('success', 'Data Profil berhasil diperbarui');
     }
 
     /**
@@ -100,6 +100,6 @@ class profilAdminController extends Controller
         $profil = Profil::findOrFail($id);
         $profil->delete();
 
-        return redirect()->route('admin.profil')->with('success', 'Visimisi berhasil dihapus.');
+        return redirect()->route('admin.profil')->with('success', 'Data Profil berhasil dihapus.');
     }
 }
