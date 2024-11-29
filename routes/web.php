@@ -52,11 +52,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::put('/update-galeri/{id}', [GaleriAdminController::class, 'update'])->name('update-galeri');
     Route::delete('/delete-galeri/{id}', [GaleriAdminController::class, 'destroy'])->name('delete-galeri');
 
+    //Peminjaman
+    Route::get('/peminjaman', [PeminjamanAdminController::class, 'index'])->name('peminjaman');
+    Route::get('/create-peminjaman', [PeminjamanAdminController::class, 'create'])->name('create-peminjaman');
+    Route::post('/store-peminjaman', [PeminjamanAdminController::class, 'store'])->name('store-peminjaman');
 
     //Profil
-    Route::get('/peminjaman', [PeminjamanAdminController::class, 'index'])->name('peminjaman');
-
-
     Route::get('/profil', [ProfilAdminController::class, 'index'])->name('profil');
     Route::get('/create-profil', [ProfilAdminController::class, 'create'])->name('create-profil');
     Route::post('/store-profil', [ProfilAdminController::class, 'store'])->name('store-profil');
@@ -102,6 +103,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/store-funfact', [FunfactController::class, 'store'])->name('store-funfact');
     Route::get('/edit-funfact/{id}', [FunfactController::class, 'edit'])->name('edit-funfact');
     Route::put('/update-funfact/{id}', [FunfactController::class, 'update'])->name('update-funfact');
+    Route::delete('/delete-funfact/{id}', [FunfactController::class, 'destroy'])->name('delete-funfact');
 });
 
 

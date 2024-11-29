@@ -5,7 +5,7 @@
     <div class="py-8">
         <div class="flex items-center justify-between mb-6">
             <h2 class="text-3xl font-semibold text-gray-200">Daftar Peminjaman Buku</h2>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+            <button onclick="window.location.href='{{ route('admin.create-peminjaman') }}'" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 + Tambah Peminjaman
             </button>
         </div>
@@ -51,8 +51,8 @@
                             <div class="flex items-center">
                                 <div class="flex-shrink-0 w-16 h-16">
                                     <img class="w-full h-full rounded-lg object-cover" 
-                                         src="https://via.placeholder.com/100" 
-                                         alt="Buku {{ $i }}"/>
+                                        src="https://via.placeholder.com/100" 
+                                        alt="Buku {{ $i }}"/>
                                 </div>
                                 <div class="ml-3">
                                     <p class="text-white whitespace-no-wrap">

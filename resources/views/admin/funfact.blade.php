@@ -45,6 +45,12 @@
                                 <div id="options-{{ $funfact->id }}" class="hidden mt-2 space-y-2">
                                     <a href="{{ route('admin.edit-funfact', $funfact->id) }}"
                                         class="block bg-green-100 px-4 py-1 rounded hover:bg-green-200">Edit</a>
+                                        <button onclick="confirmDelete({{ $funfact->id }})"
+                                            class="block bg-red-100 px-4 py-1 rounded hover:bg-red-200">Hapus</button>
+                                        <form id="delete-form-{{ $funfact->id }}" action="{{ route('admin.delete-funfact', $funfact->id) }}" method="POST" style="display: none;">
+                                            @csrf
+                                            @method('DELETE')
+                                        </form>
                                 </div>
                             </td>
                         </tr>
@@ -59,6 +65,13 @@
         function toggleOptions(id) {
             const element = document.getElementById(`options-${id}`);
             element.classList.toggle('hidden');
+        }
+
+        function confirmDelete(id) {
+            const confirmed = confirm('Apakah Anda yakin ingin menghapus visi/misi ini?');
+            if (confirmed) {
+                document.getElementById(`delete-form-${id}`).submit();
+            }
         }
     </script>
 </div>
