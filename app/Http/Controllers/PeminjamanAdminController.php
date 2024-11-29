@@ -15,7 +15,9 @@ class PeminjamanAdminController extends Controller
         return view('admin.peminjaman');
     }
 
+
     public function create()
+
     {
         return view('admin.peminjaman.create');
     }
