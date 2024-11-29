@@ -46,6 +46,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::delete('/delete-galeri/{id}', [GaleriAdminController::class, 'destroy'])->name('delete-galeri');
 
     Route::get('/peminjaman', [PeminjamanAdminController::class, 'index'])->name('peminjaman');
+    Route::get('/create-peminjaman', [PeminjamanAdminController::class, 'create'])->name('create-peminjaman');
 
     Route::get('/profil', [ProfilAdminController::class, 'index'])->name('profil');
     Route::get('/create-profil', [ProfilAdminController::class, 'create'])->name('create-profil');

@@ -5,9 +5,9 @@
     <div class="py-8">
         <div class="flex items-center justify-between mb-6">
             <h2 class="text-3xl font-semibold text-gray-200">Daftar Peminjaman Buku</h2>
-            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+            <a href="{{ route('admin.create-peminjaman') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 + Tambah Peminjaman
-            </button>
+            </a>
         </div>
 
         <div class="bg-gray-700 shadow-md rounded-lg overflow-hidden">
