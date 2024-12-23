@@ -34,7 +34,7 @@ class BukuAdminController extends Controller
             'judul' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
-            'tahun_terbit' => 'required|integer',
+            'tahun_terbit' => 'required|integer|min:1900|max:2099',
             'isbn' => 'required',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

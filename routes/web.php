@@ -56,6 +56,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/peminjaman', [PeminjamanAdminController::class, 'index'])->name('peminjaman');
     Route::get('/create-peminjaman', [PeminjamanAdminController::class, 'create'])->name('create-peminjaman');
     Route::post('/store-peminjaman', [PeminjamanAdminController::class, 'store'])->name('store-peminjaman');
+    Route::get('/edit-peminjaman/{id}', [PeminjamanAdminController::class, 'edit'])->name('edit-peminjaman');
+    Route::put('/update-peminjaman/{id}', [PeminjamanAdminController::class, 'update'])->name('update-peminjaman');
+    Route::delete('/delete-peminjaman/{id}', [PeminjamanAdminController::class, 'destroy'])->name('delete-peminjaman');
 
     //Profil
     Route::get('/profil', [ProfilAdminController::class, 'index'])->name('profil');
