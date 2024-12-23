@@ -17,5 +17,10 @@ class Buku extends Model
         'isbn',
         'gambar',
     ];
+
+    public function peminjamen()
+    {
+        return $this->hasMany(Peminjaman::class);
+    }
 }
 
