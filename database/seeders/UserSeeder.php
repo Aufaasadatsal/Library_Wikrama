@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'username' => 'admin@gmail.com',
-            'password' => Hash::make('password123'), // replace 'password123' with a secure password
+            'password' => Hash::make('password123'), 
             'remember_token' => null,
             'created_at' => now(),
             'updated_at' => now(),
